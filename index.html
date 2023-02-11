@@ -2,6 +2,30 @@
 # You don't need to edit this file, it's empty on purpose.
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
+layout: splash
+permalink: /
+hidden: true
+header:
+  overlay_image: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-home-page-feature.jpg
+  actions:
+    - label: "View Paper"
+      url: "https://people.csail.mit.edu/ghobadi/papers/topoOpt_nsdi_2023.pdf"
+excerpt: "A novel direct-connect fabric for deep neural network (DNN) training workloads."
+feature_row:
+  - title: "Key Point 1"
+    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    url: "/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - title: "Key Point 2"
+    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    url: "/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - title: "Key Point 3"
+    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    url: "/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
 ---
+{% include feature_row %}

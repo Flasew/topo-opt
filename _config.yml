@@ -13,15 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: TopoOpt
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  TopoOpt is a novel direct-connect fabric for deep
+  neural network (DNN) training workloads.
 twitter_username: username
 github_username: username
-minimal_mistakes_skin: default
+minimal_mistakes_skin: "air"
 search: true
 
 # Build settings
@@ -53,39 +52,39 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
+  # - jekyll-feed
   - jemoji
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  # name   : "TopoOpt"
+  # avatar : "/assets/images/bio-photo.jpg"
+  bio    : "A novel direct-connect fabric for deep neural network (DNN) training workloads."
   links:
-    - label: "Website"
+    - label: "Paper"
       icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
+      url: "https://people.csail.mit.edu/ghobadi/papers/topoOpt_nsdi_2023.pdf"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
+    - label: "Codebase"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/hipersys-team/TopoOpt"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
 
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+# footer:
+#   links:
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       url: "https://twitter.com/"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       url: "https://github.com/"
+#     - label: "Instagram"
+#       icon: "fab fa-fw fa-instagram"
+#       url: "https://instagram.com/"
 
 defaults:
   # _posts
@@ -113,3 +112,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+atom_feed:
+  hide: true
