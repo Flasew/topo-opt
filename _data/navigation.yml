@@ -1,6 +1,8 @@
 main:
   - title: "Abstract"
     url: /abstract/
+  - title: "Paper"
+    url: /paper/
   - title: "Recording"
     url: /recording/
   - title: "Slides"
