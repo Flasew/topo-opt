@@ -167,11 +167,11 @@ legend.append("rect")
 // create tick marks for the legend
 var legendScale = d3.scaleLog()
   .range([legendHeight, 0])
-  .domain([1, 285282]);
+  .domain([1, 280*1024]);
 
 var legendAxis = d3.axisRight(legendScale)
   // .tickValues([1, 2, 5, 15, 55, 300, 266407395])
-  .tickValues([1, 1050, 2620, 23200, 285282])
+  .tickValues([1, 1050, 2620, 32768, 280*1024])
   .tickFormat(function(d) { return Math.floor(d/1024) + " MB";  });
 
 legend.append("g")

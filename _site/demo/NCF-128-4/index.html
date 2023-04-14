@@ -6,7 +6,7 @@
   <style>
     p {
       text-align: center;
-      font-size: larger;
+      font-size: x-large;
       font-family: 'Courier New', Courier, monospace;
     }
     #menu {
@@ -129,14 +129,13 @@
       <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
       <script src="heatmap.js"></script>
       <div id="image"><img src="ncf.png" alt="NCF Model"></div>
-    </div>
+    </div> <br>
     <div id="iter_time" style="border: 4px solid rgba(2, 76, 89, 0.852); width:700px; margin:0 auto;">
-      <p>
-        TopoOpt iteration time: 56.9ms<br> 
-        Fat-Tree iteration time: 119.0ms<br>
-        Speed up: 2.09
-      </p>
-    </div>
+      <p><b>TopoOpt iteration time: 56.9 ms</b></p></div><br>
+    <div id="iter_time" style="border: 4px solid rgba(2, 76, 89, 0.852); width:700px; margin:0 auto;">
+      <p><b>Fat-Tree iteration time: 119.0 ms</b></p></div><br>
+    <div id="iter_time" style="border: 4px solid rgba(2, 76, 89, 0.852); width:700px; margin:0 auto;">
+      <p><b>Speed up: 2</b></p></div>
     <script>
       // Get references to the form and its elements
       const form = document.getElementById('menu-form');

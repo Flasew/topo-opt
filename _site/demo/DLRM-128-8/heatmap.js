@@ -165,7 +165,7 @@ var legendScale = d3.scaleLog()
   .domain([524288, 337163664]);
 
 var legendAxis = d3.axisRight(legendScale)
-  .tickValues([1048576, 16777216, 134217728, 337163664])
+  .tickValues([1048576, 16777216, 134217728, 320*1048576])
   .tickFormat(function(d) { return Math.floor(d/1048576) + " MB"; });
 
 legend.append("g")
