@@ -171,8 +171,8 @@ var legendScale = d3.scaleLog()
 
 var legendAxis = d3.axisRight(legendScale)
   // .tickValues([1, 2, 5, 15, 55, 300, 266407395])
-  .tickValues([1, 525, 1050, 2620, 23200, 285282])
-  .tickFormat(function(d) { return d + " KB"; });
+  .tickValues([1, 1050, 2620, 23200, 285282])
+  .tickFormat(function(d) { return Math.floor(d/1024) + " MB";  });
 
 legend.append("g")
   .attr("class", "legend-axis")

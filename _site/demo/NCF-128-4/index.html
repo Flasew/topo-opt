@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <title>Graph Demo</title>
   <style>
-
+    p {
+      text-align: center;
+      font-size: large;
+      font-family: 'Courier New', Courier, monospace;
+    }
     #menu {
       display: flex;
       justify-content: center;
@@ -125,6 +129,11 @@
       <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
       <script src="heatmap.js"></script>
       <div id="image"><img src="ncf.png" alt="NCF Model"></div>
+    </div>
+    <div id="iter_time">
+      <p>TopoOpt iteration time: 56.9ms</p> 
+      <p>Fat-Tree iteration time: 119.0ms</p>
+      <p>Speed up: 2.09</p>
     </div>
     <script>
       // Get references to the form and its elements

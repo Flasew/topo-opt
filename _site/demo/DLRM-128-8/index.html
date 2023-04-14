@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <title>Graph Demo</title>
   <style>
-    p {text-align: center;}
+    p {
+      text-align: center;
+      font-size: large;
+      font-family: 'Courier New', Courier, monospace;
+    }
     #menu {
       display: flex;
       justify-content: center;
@@ -106,7 +110,7 @@
         </select>
         <label for="cluster-size">Cluster Size:</label>
         <select id="cluster-size" name="cluster-size">
-          <option value="8">8</option>
+          <option value="16">8</option>
           <option value="128" selected>128</option>
         </select>
         <label for="node-degree">Node Degree:</label>
@@ -127,9 +131,9 @@
       <div id="image"><img src="dlrm.png" alt="DLRM Model"></div>
     </div>
     <div id="iter_time">
-      <p>TopoOpt iteration time: </p> 
-      <p>Fat-Tree iteration time: </p>
-      <p>Speed up: </p>
+      <p>TopoOpt iteration time: 44.7ms</p> 
+      <p>Fat-Tree iteration time: 132.6ms</p>
+      <p>Speed up: 2.97</p>
     </div>
     <script>
       // Get references to the form and its elements
