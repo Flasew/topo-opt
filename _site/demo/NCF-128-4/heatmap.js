@@ -75,7 +75,7 @@ var myColor = d3.scaleLog()
   
   var mousemove = function(d) {
     tooltip
-        .html("The transfer size for <br>("+d.variable+", "+d.group+") is "+d.value/1000+" MB")
+        .html("The transfer size for <br>("+d.variable+", "+d.group+") is "+d.value/1000+" KB")
         .style("left", (d3.event.pageX + 10) + "px")
         .style("top", (d3.event.pageY + 10) + "px");
 };
@@ -172,7 +172,7 @@ var legendScale = d3.scaleLog()
 var legendAxis = d3.axisRight(legendScale)
   // .tickValues([1, 2, 5, 15, 55, 300, 266407395])
   .tickValues([1, 525, 1050, 2620, 23200, 285282])
-  .tickFormat(function(d) { return d + " MB"; });
+  .tickFormat(function(d) { return d + " KB"; });
 
 legend.append("g")
   .attr("class", "legend-axis")

@@ -44,7 +44,7 @@ d3.csv("heatmap128-1.csv", function(data) {
   // Build color scale
 var myColor = d3.scaleLog()
 .range(["white", "#69b3a2", "#104983"])
-.domain([1, 2, 2000])
+.domain([1, 1048576, 337163664])
 .interpolate(d3.interpolateRgb);
 
   var tooltip = d3.select("body")
@@ -74,7 +74,7 @@ var myColor = d3.scaleLog()
   
   var mousemove = function(d) {
     tooltip
-        .html("The transfer size for <br>("+d.variable+", "+d.group+") is "+d.value/1000+" MB")
+        .html("The transfer size for <br>("+d.variable+", "+d.group+") is "+Math.floor(d.value/1048576)+" MB")
         .style("left", (d3.event.pageX + 10) + "px")
         .style("top", (d3.event.pageY + 10) + "px");
 };
@@ -112,7 +112,7 @@ document.addEventListener('click', function(event) {
       .attr("ry", 4)
       .attr("width", x.bandwidth() )
       .attr("height", y.bandwidth() )
-      .style("fill", function(d) { return myColor(d.value/1000)} )
+      .style("fill", function(d) { return myColor(d.value)} )
       .style("stroke-width", 4)
       .style("stroke", "none")
       .style("opacity", 0.8)
@@ -162,11 +162,11 @@ legend.append("rect")
 // create tick marks for the legend
 var legendScale = d3.scaleLog()
   .range([legendHeight, 0])
-  .domain([1, 2000]);
+  .domain([524288, 337163664]);
 
 var legendAxis = d3.axisRight(legendScale)
-  .tickValues([1, 2, 5, 15, 55, 300, 2000])
-  .tickFormat(function(d) { return d + " MB"; });
+  .tickValues([1048576, 16777216, 134217728, 337163664])
+  .tickFormat(function(d) { return Math.floor(d/1048576) + " MB"; });
 
 legend.append("g")
   .attr("class", "legend-axis")
